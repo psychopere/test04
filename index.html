@@ -49,6 +49,13 @@
         renderer.xr.enabled = true;
         container.appendChild(renderer.domElement);
 
+        const button = ARButton.createButton(renderer, {
+          requiredFeatures: ["hit-test"], // notice a new required feature
+        });
+        document.body.appendChild(button);
+        renderer.domElement.style.display = "none";
+        window.addEventListener("resize", onWindowResize, false);
+
         var light = new THREE.HemisphereLight(0xffffff, 0xbbbbff, 1);
         light.position.set(0.5, 1, 0.25);
         scene.add(light);
@@ -59,12 +66,7 @@
 
         addReticleToScene();
 
-        const button = ARButton.createButton(renderer, {
-          requiredFeatures: ["hit-test"], // notice a new required feature
-        });
-        document.body.appendChild(button);
-        renderer.domElement.style.display = "none";
-        window.addEventListener("resize", onWindowResize, false);
+
       }
 
       function addReticleToScene() {
