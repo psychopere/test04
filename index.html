@@ -65,8 +65,6 @@
         scene.add(controller);
 
         addReticleToScene();
-
-
       }
 
       function addReticleToScene() {
@@ -83,9 +81,9 @@
             //scene.add(model);
             //mixer = new THREE.AnimationMixer(reticle);
             //const clips = gltf.animations;
-           // const clip = THREE.AnimationClip.findByName(clips, "winstart");
+            // const clip = THREE.AnimationClip.findByName(clips, "winstart");
             //const action = mixer.clipAction(clip);
-           // action.play();
+            // action.play();
           },
           // called while loading is progressing
           function (xhr) {
@@ -114,7 +112,7 @@
           // cone added at the point of a hit test
           // replace the next lines to add your own object in space
           // set the position of the cylinder based on where the reticle is
-          redicle.position.setFromMatrixPosition(reticle.matrix);
+          reticle.position.setFromMatrixPosition(reticle.matrix);
           reticle.quaternion.setFromRotationMatrix(reticle.matrix);
 
           scene.add(reticle);
