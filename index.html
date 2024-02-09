@@ -79,11 +79,11 @@
           function (gltf) {
             reticle = gltf.scene;
             //scene.add(model);
-            mixer = new THREE.AnimationMixer(reticle);
-            const clips = gltf.animations;
-            const clip = THREE.AnimationClip.findByName(clips, "winstart");
-            const action = mixer.clipAction(clip);
-            action.play();
+            //mixer = new THREE.AnimationMixer(reticle);
+            //const clips = gltf.animations;
+           // const clip = THREE.AnimationClip.findByName(clips, "winstart");
+            //const action = mixer.clipAction(clip);
+           // action.play();
           },
           // called while loading is progressing
           function (xhr) {
